@@ -13,8 +13,8 @@ echo "GCP Project name is: "$PROJECT
 dataset_check = $(bq ls -d | grep -w dataset_test)
 
 # Checking if the data exist or not with if statement
-if [-n "$dataset_check"];
-    then echo -e "BigQuery dataset exists!. Skip creation step."
+if [-n "$dataset_check"]; then
+    echo -e "BigQuery dataset exists!. Skip creation step."
 else
     echo "BigQuery dataset does not exist. Creating a dataset called: "$DATASETNAME
     bq --location=US mk --dataset --description=DESCRIPTION $PROJECT:$DATASETNAME
