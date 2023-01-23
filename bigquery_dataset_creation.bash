@@ -22,3 +22,4 @@ else
 echo "Bellow are your current datasets:"
 bq ls
 fi
+
